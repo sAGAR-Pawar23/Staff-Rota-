@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="SCITS  Lockscreen">
+  <meta name="generator" content="SCITS  Lockscreen">
+  <title>SCITS Lockscreen</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <script src="js/main.js"></script>
+</head>
+
+<body>
+  <!-- Main Wrape Section Start Here -->
+  <section class="dashbord-main-info">
+    <div class="container-fluid main-con-padding-hide">
+      <div class="row m-0">
+        <!-- Left Side Bar Section Start Here -->
+        <div class="col-lg-1 p-0">
+          <div class="left-sidebar-info">
+            <div class="user-name-crical"> MR </div>
+            <div class="nav-links">
+              <nav>
+                <ul>
+                  <li><a href="#"><i class="fa fa-bell-o"></i></a></li>
+                  <li><a href="#"><i class="fa fa-plus-circle"></i>Actions</a></li>
+                  <div class="scroll">
+                    <li><a href="index.html"><i class="fa fa-home" ></i>Home</a></li>
+                    <li><a href="./calendar.html" class="active"><i class="fa fa-calendar-check-o"></i>Calendar</a></li>
+                    <li><a href="./manage-teams.html"><i class="fa fa-users"></i>Employees</a></li>
+                    <li><a href="./rota-planner.html"><i class="fa fa-id-card-o"></i>Rotas</a></li>
+                    <li><a href="add-employees.html"><i class="fa fa-user-o" aria-hidden="true"></i>Add employees</a></li>
+                    <li><a href="add-sickness.html"><i class="fa fa-medkit" aria-hidden="true"></i>Add sickness</a></li>
+                    <li><a href="annual-leave.html"><i class="fa fa-clock-o" aria-hidden="true"></i>Annual leave</a></li>
+                    <li><a href="add-lateness.html"><i class="fa fa-sun-o" aria-hidden="true"></i>Add Lateness</a></li>
+                    <li><a href="other-absence.html"><i class="fa fa-sun-o" aria-hidden="true"></i>Add Other Absence</a></li>
+                  </div>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-11">
+          <div class="row">
+            <!-- Top Bar Info Section Start Here -->
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
+                <div class="logo-text">
+                  <h3>SCI<span>TS</span></h3>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="logout-right">
+                  <h4><a href="#"><i class="fa fa-sign-in"></i> Logout</a></h4>
+                </div>
+              </div>
+            </div>
+            <!-- Top Bar Info Section End Here -->
+            <div class="col-lg-12">
+              <div class="row">
+                <div class="col-lg-12">
+                  <ul class="nav nav-tabs calender-Tab nav-fill" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                        type="button" role="tab" aria-controls="home" aria-selected="true">Calendar</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                        type="button" role="tab" aria-controls="profile" aria-selected="false">Pending requests</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
+                        type="button" role="tab" aria-controls="contact" aria-selected="false">Mandatory leave</button>
+                    </li>
+                  </ul>
+                  <div class="tab-content tabs-info-content-space-bar" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                      <div id='calendar'></div>
+                    </div>
+
+                    <div class="tab-pane fade content-info-title" id="profile" role="tabpanel"
+                      aria-labelledby="profile-tab">
+                      <select>
+                        <option value="Date raised (Oldest first)">Date raised (Oldest first)</option>
+                        <option value="Date raised (Oldest first)">Date raised (Oldest first)</option>
+                        <option value="Date raised (Oldest first)">Date raised (Oldest first)</option>
+                        <option value="Date raised (Oldest first)">Date raised (Oldest first)</option>
+                        <option value="Date raised (Oldest first)">Date raised (Oldest first)</option>
+                      </select>
+                      <h2>Pending requests (0)</h2>
+                      <p>Everything is up to date, have a cuppa!</p>
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+                      <h3>Mandatory leave</h3>
+                      <p>Dates your employees have to take as leave such as shutdown periods, local bank holidays etc.
+                        Once set, it will appear on employee profile as Mandatory time off as well as in the calendar.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Col Md 9 End -->
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- Main Wrape Section End Here -->
+  <!-- ============ Bootstrap Main ===================-->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+      var initialLocaleCode = 'en';
+      var localeSelectorEl = document.getElementById('locale-selector');
+      var calendarEl = document.getElementById('calendar');
+
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        headerToolbar: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+        },
+        initialDate: '2023-01-20',
+        locale: initialLocaleCode,
+        buttonIcons: false, // show the prev/next text
+        weekNumbers: true,
+        navLinks: true, // can click day/week names to navigate views
+        editable: true,
+        dayMaxEvents: true, // allow "more" link when too many events
+        events: [
+          {
+            title: 'All Day Event',
+            start: '2023-01-20',
+            color: '#666'
+
+          },
+          {
+            title: 'Long Event',
+            start: '2020-09-07',
+            end: '2020-09-10'
+          },
+          {
+            groupId: 999,
+            title: 'Repeating Event',
+            start: '2020-09-09T16:00:00'
+          },
+          {
+            groupId: 999,
+            title: 'Repeating Event',
+            start: '2020-09-16T16:00:00'
+          },
+          {
+            title: 'Conference',
+            start: '2020-09-11',
+            end: '2020-09-13'
+          },
+          {
+            title: 'Meeting',
+            start: '2020-09-12T10:30:00',
+            end: '2020-09-12T12:30:00'
+          },
+          {
+            title: 'Lunch',
+            start: '2020-09-12T12:00:00'
+          },
+          {
+            title: 'Meeting',
+            start: '2020-09-12T14:30:00'
+          },
+          {
+            title: 'Happy Hour',
+            start: '2020-09-12T17:30:00'
+          },
+          {
+            title: 'Dinner',
+            start: '2020-09-12T20:00:00'
+
+          },
+          {
+            title: 'Birthday Party',
+            start: '2020-09-13T07:00:00'
+          },
+          {
+            title: 'Click for Google',
+            url: 'http://google.com/',
+            start: '2020-09-28'
+          }
+        ]
+      });
+
+      calendar.render();
+
+      // build the locale selector's options
+      calendar.getAvailableLocaleCodes().forEach(function (localeCode) {
+        var optionEl = document.createElement('option');
+        optionEl.value = localeCode;
+        optionEl.selected = localeCode == initialLocaleCode;
+        optionEl.innerText = localeCode;
+        localeSelectorEl.appendChild(optionEl);
+      });
+
+      // when the selected option changes, dynamically change the calendar option
+      localeSelectorEl.addEventListener('change', function () {
+        if (this.value) {
+          calendar.setOption('locale', this.value);
+        }
+      });
+
+    });
+
+  </script>
+
+
+</body>
+
+</html>

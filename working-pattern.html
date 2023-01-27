@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="SCITS  Lockscreen">
+    <meta name="generator" content="SCITS  Lockscreen">
+    <title>SCITS Lockscreen</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<style>
+    .header_link {
+        display: none;
+    }
+</style>
+
+<body>
+    <!-- Main Wrape Section Start Here -->
+    <section class="dashbord-main-info">
+        <div class="container-fluid p-0">
+            <div class="row m-0">
+                <!-- Left Side Bar Section Start Here -->
+                <div class="col-lg-1 p-0">
+                    <div class="left-sidebar-info">
+                        <div class="user-name-crical"> MR </div>
+                        <div class="nav-links">
+                            <nav>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-bell-o"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-plus-circle"></i>Actions</a></li>
+                                    <div class="scroll">
+                                      <li><a href="index.html"><i class="fa fa-home" ></i>Home</a></li>
+                                      <li><a href="./calendar.html"><i class="fa fa-calendar-check-o"></i>Calendar</a></li>
+                                      <li><a href="./manage-teams.html"><i class="fa fa-users"></i>Employees</a></li>
+                                      <li><a href="./rota-planner.html"><i class="fa fa-id-card-o"></i>Rotas</a></li>
+                                      <li><a href="add-employees.html"><i class="fa fa-user-o" aria-hidden="true"></i>Add employees</a></li>
+                                      <li><a href="add-sickness.html"><i class="fa fa-medkit" aria-hidden="true"></i>Add sickness</a></li>
+                                      <li><a href="annual-leave.html"><i class="fa fa-clock-o" aria-hidden="true"></i>Annual leave</a></li>
+                                      <li><a href="add-lateness.html"><i class="fa fa-sun-o" aria-hidden="true"></i>Add Lateness</a></li>
+                                      <li><a href="other-absence.html"><i class="fa fa-sun-o" aria-hidden="true"></i>Add Other Absence</a></li>
+                                    </div>
+                                  </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-11">
+                    <div class="row">
+                        <!-- Top Bar Info Section Start Here -->
+                        <div class="row position">
+                            <div class="col-lg-6 col-md-6 d-flex justify-content-between">
+                                <div class="logo-text">
+                                    <h3>SCI<span>TS</span></h3>
+                                </div>
+                                <div class="search_employees">
+                                    <input type="" value="" placeholder="Search employees...">
+                                    <span class="search_icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 right_links col-md-6 d-flex justify-content-end">
+                                <div class="header_link">
+                                    <ul class="d-flex ul_link">
+                                        <li class="list_items"> <button class="button"> What's new</button> <span
+                                                class="notification-number">
+                                                <p class="notification">5</p>
+                                            </span></li>
+                                        <li class="list_items"> <button class="button"> <span class="question-mark"><i
+                                                        class="fa fa-question" aria-hidden="true"></i></span>
+                                                Help</button></li>
+                                        <li class="list_items"> <button class="button"> <span class="comment-icon"><i
+                                                        class="fa fa-comment-o" aria-hidden="true"></i></span>
+                                                Feedback</button></li>
+                                        <li class="list_items"> <button class="button"> <span class="setting-icon"><i
+                                                        class="fa fa-cog" aria-hidden="true"></i></span>
+                                                Setting</button></li>
+                                    </ul>
+                                </div>
+                                <div class="logout-right">
+                                    <h4><a href="#"><i class="fa fa-sign-in"></i> Logout</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Top Bar Info Section End Here -->
+                        <!-- Working Pattern form start from here -->
+                        <div class="container">
+                            <div class="row working-time-pattern">
+                                <div class="col-md-12">
+                                    <div class="heading">
+                                        <h3 class="head">Settings</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-4">
+                                    <div class="pattern-heading">
+                                        <p class="">Working Time Pattern</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <form action="">
+                                        <div class="form-heading">
+                                            <h5>Create working time pattern</h5>
+                                            <p><b style="font-weight: 600;">Please note:</b> You cannot edit a pattern
+                                                after it has been created so make sure you are happy before finalising
+                                                it.</p>
+                                        </div>
+                                        <div class="col-md-12 first-section">
+                                            <div class="patern-detail">
+                                                <h4>Pattern details</h4>
+                                            </div>
+                                            <div class="mb-3 row">
+                                                <label for="name" class="col-sm-2 col-form-label">Pattern Name</label>
+                                                <div class="col-sm-3 col-md-3">
+                                                    <input type="text" placeholder="Pattern Name" class="form-control"
+                                                        id="staticEmail" value="">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 row">
+                                                <label for="static" class="col-sm-2 col-form-label">Make Default</label>
+                                                <div class="col-md-2">
+                                                    <input type="checkbox" class="custom-radio" id="staticEmail" value="">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 row">
+                                                <label for="select" class="col-sm-2 col-form-label">Copy existing
+                                                    pattern?</label>
+                                                <div class="col-sm-3 col-md-3">
+                                                    <select class="form-select form-control"
+                                                        aria-label="Default select example">
+                                                        <option selected value="1">Create new pattern</option>
+                                                        <option value="2">Mon-Fri 9-5</option>
+                                                        <option value="3">Test</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="second-content">
+                                                <div class="content-heading">
+                                                    <h2>Times and Breaks</h2>
+                                                    <p>Enter start and end times for your working time pattern.</p>
+                                                </div>
+                                                <div class="form-inline d-flex justify-content-between">
+                                                    <div class="mb-3 text-center d-flex">
+                                                        <label for="start" class="col-sm-3 col-form-label">Start</label>
+                                                        <div class="col-sm-4 position_icon">
+                                                            <input type="text" class="form-control" id="start" value="09:00">
+                                                            <span class="watch-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3 text-center d-flex">
+                                                        <label for="finish"
+                                                            class="col-sm-3 col-form-label">Finish</label>
+                                                        <div class="col-sm-4 position_icon">
+                                                            <input type="text" class="form-control"  value="17:00" id="finish">
+                                                            <span class="watch-icon"><i class="fa fa-clock-o"
+                                                                    aria-hidden="true"></i></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3 text-center d-flex">
+                                                        <label for="break"
+                                                            class="col-sm-3 col-form-label">Breaks</label>
+                                                        <div class="col-sm-4 position_icon">
+                                                            <input type="text" value="0 mins" class="form-control" id="break">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form_check d-flex">
+                                                        <div class="heading">
+                                                            <p>Repeat</p>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <label class="form-check-label" for="monday">M</label>
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="monday">
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <label for="tuesday" class="form-check-label">T</label>
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="tuesday">
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <label for="wednesday" class="form-check-label">W</label>
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="wednesday">
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <label for="thrusday" class="form-check-label">T</label>
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="thrusday">
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <label for="friday" class="form-check-label">F</label>
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="friday">
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <label for="saturday" class="form-check-label">S</label>
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="saturday">
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <label for="sunday" class="form-check-label">S</label>
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="sunday">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="working-days col-md-12">
+                                                    <p><strong style="font-weight: 600">0 working days</strong> selected totalling <strong style="font-weight: 600"> 0 hrs</strong>, excluding breaks</p>
+                                                    <div class="btn">
+                                                        <button type="submit" class="submit_btn">Add another time frame</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="third-content my-4">
+                                                <div class="content-heading">
+                                                    <h2>Public holidays </h2>
+                                                    <p>Select if employees on this working time pattern work public holidays and if they are included as part of the annual leave entitlement.</p>
+                                                </div>
+                                                <div class="d-flex cards align-items-center">
+                                                    <div class="heading">
+                                                        <label for="">Public holidays</label>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <div class="card-1 card-btn">
+                                                            <input type="radio" class="radio_btn" name="radio-btn" checked>
+                                                            <div class="direct-sibling">
+                                                            <h5>Decucted</h5>
+                                                            <p>They'll have a day off for any public holidays they would normally be working on and this is taken from their yearly holiday entitlement.
+                                                            </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-2 card-btn">
+                                                            <input type="radio" class="radio_btn" name="radio-btn">
+                                                            <div class="direct-sibling">
+                                                            <h5>Not deducted</h5>
+                                                            <p>They'll have a day off for any public holidays they would normally be working on and this will be given on top of their yearly holiday entitlement.
+                                                            </p>
+                                                        </div>
+                                                        </div>
+                                                        <div class="card-3 card-btn">
+                                                            <input type="radio" class="radio_btn" name="radio-btn">
+                                                            <div class="direct-sibling">
+                                                            <h5>Works public holidays</h5>
+                                                            <p>Public holidays are seen as a normal day and they won't have the day off.
+                                                            </p>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="btn-s my-3">
+                                                    <button type="submit" class="save-btn">Save</button>
+                                                    <button class="cancel-btn">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Working Pattern form end here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Main Wrape Section End Here -->
+    <!-- ===================================== 
+Bootstrap Main
+========================================-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

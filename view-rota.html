@@ -1,0 +1,952 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="SCITS  Lockscreen">
+    <meta name="generator" content="SCITS  Lockscreen">
+    <title>SCITS Lockscreen</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    .header_link {
+        display: none;
+    }
+</style>
+
+<body>
+    <!-- Main Wrape Section Start Here -->
+    <section class="dashbord-main-info">
+        <div class="container-fluid p-0">
+            <div class="row m-0">
+                <!-- Left Side Bar Section Start Here -->
+                <div class="col-lg-1 p-0">
+                    <div class="left-sidebar-info">
+                        <div class="user-name-crical"> MR </div>
+                        <div class="nav-links">
+                            <nav>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-bell-o"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-plus-circle"></i>Actions</a></li>
+                                    <div class="scroll">
+                                        <li><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
+                                        <li><a href="./calendar.html"><i class="fa fa-calendar-check-o"></i>Calendar</a>
+                                        </li>
+                                        <li><a href="./manage-teams.html"><i class="fa fa-users"></i>Employees</a></li>
+                                        <li><a href="./rota-planner.html"><i class="fa fa-id-card-o"></i>Rotas</a></li>
+                                        <li><a href="add-employees.html"><i class="fa fa-user-o"
+                                                    aria-hidden="true"></i>Add employees</a></li>
+                                        <li><a href="add-sickness.html" class="active"><i class="fa fa-medkit"
+                                                    aria-hidden="true"></i>Add sickness</a></li>
+                                        <li><a href="annual-leave.html"><i class="fa fa-clock-o"
+                                                    aria-hidden="true"></i>Annual leave</a></li>
+                                        <li><a href="add-lateness.html"><i class="fa fa-sun-o"
+                                                    aria-hidden="true"></i>Add Lateness</a></li>
+                                        <li><a href="other-absence.html"><i class="fa fa-sun-o"
+                                                    aria-hidden="true"></i>Add Other Absence</a></li>
+                                    </div>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-11">
+                    <div class="row">
+                        <!-- Top Bar Info Section Start Here -->
+                        <div class="row position">
+                            <div class="col-lg-6 col-md-6 d-flex justify-content-between">
+                                <div class="logo-text">
+                                    <h3>SCI<span>TS</span></h3>
+                                </div>
+                                <div class="search_employees">
+                                    <input type="" value="" placeholder="Search employees...">
+                                    <span class="search_icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 right_links col-md-6 d-flex justify-content-end">
+                                <div class="header_link">
+                                    <ul class="d-flex ul_link">
+                                        <li class="list_items"> <button class="button"> What's new</button> <span
+                                                class="notification-number">
+                                                <p class="notification">5</p>
+                                            </span></li>
+                                        <li class="list_items"> <button class="button"> <span class="question-mark"><i
+                                                        class="fa fa-question" aria-hidden="true"></i></span>
+                                                Help</button></li>
+                                        <li class="list_items"> <button class="button"> <span class="comment-icon"><i
+                                                        class="fa fa-comment-o" aria-hidden="true"></i></span>
+                                                Feedback</button></li>
+                                        <li class="list_items"> <button class="button"> <span class="setting-icon"><i
+                                                        class="fa fa-cog" aria-hidden="true"></i></span>
+                                                Setting</button></li>
+                                    </ul>
+                                </div>
+                                <div class="logout-right">
+                                    <h4><a href="#"><i class="fa fa-sign-in"></i> Logout</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Top Bar Info Section End Here -->
+                        <div class="container" id="timeline">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="rota_name">
+                                        <p class="breadcrum"> <a href="./rota-planner.html"> <span class="rota-link">
+                                                    All Rota</span> </a> > test </p>
+                                        <h3>Test</h3>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="date-info">
+                                            <p>Wed, 11 Jan 2023 - Tue, 17 Jan 2023 | 7 days | 0 staff members</p>
+                                        </div>
+                                        <div class="shift-patern">
+                                            <div class="select-shift">
+                                                Show shifts for:
+                                                <input type="radio" class="input_custom_btn" id="everyone"
+                                                    name="select">
+                                                <div class="label">
+                                                    <label for="everyone" class="label_custom every">Everyone</label>
+                                                </div>
+                                                <input type="radio" id="me" class="input_custom_btn" name="select">
+                                                <div class="label">
+                                                    <label for="me" class="label_custom me">Me</label>
+                                                </div>
+                                                <input type="radio" id="specific" class="input_custom_btn"
+                                                    name="select">
+                                                <div class="label">
+                                                    <label for="specific" class="label_custom specific">Specific
+                                                        people...</label>
+                                                </div>
+                                            </div>
+                                            <div class="select-yes-no">
+                                                Show notes:
+                                                <input type="radio" class="input_custom_btn" id="yes" name="yes_no">
+                                                <div class="label">
+                                                    <label for="yes" class="label_custom yes">Yes</label>
+                                                </div>
+                                                <input type="radio" id="no" class="input_custom_btn" name="yes_no">
+                                                <div class="label">
+                                                    <label for="no" class="label_custom no">No</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <p>Once a shift has been added you can publish this rota.</p>
+                                        </div>
+                                        <div class="d-flex align-items-center drag-table-link">
+                                            <a href="#"><i class="fa fa-clone"></i> Drag and drop view</a>
+                                            <a href="#"><i class="fa fa-calendar"></i> Table view</a>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex time-for-shift">
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid rgb(232, 234, 236); width: calc(4.16667%); border-left: 1px solid rgb(161, 169, 179);">
+                                            0:00
+                                        </div>
+
+
+
+
+
+
+
+
+
+
+
+                                    <div class="h-11 w-full relative leading-[11px] overflow-hidden" data-e2e="AllShifts">
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <div class="inline-block border-r timeline:border-gray-300 border-white first:border-l p-[2px]  h-11 " style="width: calc(4.16667%);">
+                                        </div>
+                                        <button type="button" class="cursor-pointer absolute bottom-[3px] leading-4 " data-testid="Shift card" data-e2e="Shift card"        style="width: 33.3333%; left: 37.5%;">
+                                            <div class="p-[2px] flex items-center whitespace-nowrap bg-white flex-row">
+                                                <div class="flex items-center justify-center flex-shrink-0 w-[30px] h-[30px] overflow-hidden rounded-full">
+                                                    <div class="relative inline-block">
+                                                        <div class="bg-primary-400 text-white rounded-full flex justify-center items-center w-9 h-9 text-xs">KW</div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex flex-col whitespace-nowrap">
+                                                    <div class="flex items-center whitespace-nowrap flex-row">
+                                                        <div class="mx-1 my-0 text-base whitespace-nowrap" data-e2e="employee name">Karen Wood</div>
+                                                        <div class="block mx-1 my-0 text-sm text-gray-600 whitespace-nowrap">09:00 - 17:00</div>
+                                                    </div>
+                                                    <div class="flex text-gray-600 text-xs my-0 mx-1 flex-row"></div>
+                                                </div>
+                                            </div>
+                                            <div class="h-[2px] timeline:border-[2px] timeline:border-[rgb(161,169,179)] rounded-md "></div>
+                                            <div class="flex w-full justify-between absolute bottom-[-3px]">
+                                                <div class="absolute bottom-0 w-0 h-0  border timeline:flex left-[-1px]" style="border-top: none; border-bottom: none; border-right: 6px solid rgb(161, 169, 179);">
+                                                </div>
+                                                <div class="absolute bottom-0 w-0 h-0 border hidden timeline:flex right-[-1px]" style="border-top: none; border-bottom: none;  border-left: 6px solid rgb(161, 169, 179);">
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid rgb(232, 234, 236); width: calc(4.16667%); border-left: 1px solid rgb(232, 234, 236);">
+                                        </div>
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid rgb(232, 234, 236); width: calc(4.16667%); border-left: 1px solid rgb(232, 234, 236);">
+                                        </div>
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid rgb(232, 234, 236); width: calc(4.16667%); border-left: 1px solid rgb(232, 234, 236);">
+                                        </div>
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid rgb(232, 234, 236); width: calc(4.16667%); border-left: 1px solid rgb(161, 169, 179);">
+                                            4:00</div>
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid rgb(232, 234, 236); width: calc(4.16667%); border-left: 1px solid rgb(232, 234, 236);">
+                                        </div>
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid rgb(232, 234, 236); width: calc(4.16667%); border-left: 1px solid rgb(232, 234, 236);">
+                                        </div>
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid rgb(232, 234, 236); width: calc(4.16667%); border-left: 1px solid rgb(232, 234, 236);">
+                                        </div>
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid rgb(232, 234, 236); width: calc(4.16667%); border-left: 1px solid rgb(161, 169, 179);">
+                                            8:00</div>
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid rgb(232, 234, 236); width: calc(4.16667%); border-left: 1px solid rgb(232, 234, 236);">
+                                        </div>
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid rgb(232, 234, 236); width: calc(4.16667%); border-left: 1px solid rgb(232, 234, 236);">
+                                        </div>
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid rgb(232, 234, 236); width: calc(4.16667%); border-left: 1px solid rgb(232, 234, 236);">
+                                        </div>
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid rgb(232, 234, 236); width: calc(4.16667%); border-left: 1px solid rgb(161, 169, 179);">
+                                            12:00</div>
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid rgb(232, 234, 236); width: calc(4.16667%); border-left: 1px solid rgb(232, 234, 236);">
+                                        </div>
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid rgb(232, 234, 236); width: calc(4.16667%); border-left: 1px solid rgb(232, 234, 236);">
+                                        </div>
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid rgb(232, 234, 236); width: calc(4.16667%); border-left: 1px solid rgb(232, 234, 236);">
+                                        </div>
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid rgb(232, 234, 236); width: calc(4.16667%); border-left: 1px solid rgb(161, 169, 179);">
+                                            16:00</div>
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid #e8eaec; width: calc(4.16667%); border-left: 1px solid rgb(232, 234, 236);">
+                                        </div>
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid rgb(232, 234, 236); width: calc(4.16667%); border-left: 1px solid rgb(232, 234, 236);">
+                                        </div>
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid rgb(232, 234, 236); width: calc(4.16667%); border-left: 1px solid rgb(232, 234, 236);">
+                                        </div>
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid rgb(232, 234, 236); width: calc(4.16667%); border-left: 1px solid rgb(161, 169, 179);">
+                                            20:00</div>
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid rgb(232, 234, 236); width: calc(4.16667%); border-left: 1px solid rgb(232, 234, 236);">
+                                        </div>
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid rgb(232, 234, 236); width: calc(4.16667%); border-left: 1px solid rgb(232, 234, 236);">
+                                        </div>
+                                        <div class="add-color"
+                                            style="border-bottom: 1px solid rgb(232, 234, 236); width: calc(4.16667%); border-left: 1px solid rgb(232, 234, 236);">
+                                        </div>
+                                    </div>
+                                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                                    aria-controls="panelsStayOpen-collapseOne">
+                                                    Wed 11 Jan 2023 - Tue 17 Jan 2023
+                                                </button>
+                                            </h2>
+                                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+                                                aria-labelledby="panelsStayOpen-headingOne">
+                                                <div class="accordion-body">
+                                                    <div class="d-flex">
+                                                        <div class="date-of-shift">
+                                                            <strong>Wed 11 Jan</strong>
+                                                        </div>
+                                                        <div class="amount-of-shift">
+                                                            <p>0 shifts</p>
+                                                        </div>
+                                                        <div class="add-shift-btn">
+                                                            <!-- Button trigger modal -->
+                                                            <button type="button" class="modal-btn" data-bs-toggle="modal" data-bs-target="#exampleModal"> Add shift </button>
+
+                                                            <!-- Modal -->
+                                                            <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                <div class="modal-dialog"
+                                                                    style="display: block; max-width: 800px;">
+                                                                    <div class="modal-content">
+                                                                        <!-- <div class="modal-header">
+                                                                            <h1 class="modal-title fs-5"
+                                                                                id="exampleModalLabel">Modal title</h1>
+                                                                            <button type="button" class="btn-close"
+                                                                                data-bs-dismiss="modal"
+                                                                                aria-label="Close"></button>
+                                                                        </div> -->
+                                                                        <div class="modal-body">
+                                                                            <div class="container remove-padding M-right"
+                                                                                id="multiForm" style="display: block;">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="follow-step">
+                                                                                            <ul class="employees-detail d-flex">
+                                                                                                <li class="Employees-details detail">
+                                                                                                    <span class="s-font">Create shift</span>
+                                                                                                </li>
+                                                                                                <li class="Address-details detail"
+                                                                                                    id="bg1" style="color: rgb(153, 153, 153); background-color: rgb(255, 255, 255);">
+                                                                                                    <span class="s-font">Assign
+                                                                                                        Employees</span>
+                                                                                                </li>
+                                                                                                <li class="Employment-details detail"
+                                                                                                    id="bg2" style="color: rgb(153, 153, 153); background-color: rgb(255, 255, 255);">
+                                                                                                    <span class="s-font">Summary</span>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                        <div class="row" id="form1" style="display: block;">
+                                                                                            <div class="col-md-12">
+                                                                                                <div class="employees-info">
+                                                                                                    <div class="add-margin col-md-12">
+                                                                                                        <h4>Create new shift</h4>
+                                                                                                        <span class="date-of-weak-shift">Saturday 04 February 2023</span>
+                                                                                                    </div>
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-md-12"
+                                                                                                            id="showDiv">
+                                                                                                            <form class="employees-data"
+                                                                                                                onsubmit="return validateform()">
+                                                                                                                <div class="row">
+                                                                                                                    <label for="firstName"
+                                                                                                                        class="col-sm-2 col-form-label">Shift time</label>
+                                                                                                                        <!-- <div class="col-sm-5"> -->
+                                                                                                                        <div class="col-auto">
+                                                                                                                            <input type="time"
+                                                                                                                                class="col-sm-2 form-control"
+                                                                                                                                id="firstName"
+                                                                                                                                aria-describedby="emailHelp" value="9:00"
+                                                                                                                                placeholder="">
+                                                                                                                        </div>
+                                                                                                                        <div class="col-auto">
+                                                                                                                            <span class="btew-time">to</span>
+                                                                                                                        </div>
+                                                                                                                        <div class="col-auto">
+                                                                                                                            <input type="time"
+                                                                                                                            class="col-sm-2 form-control"
+                                                                                                                            id="firstName" value="9:00"
+                                                                                                                            aria-describedby="emailHelp"
+                                                                                                                            placeholder="">
+                                                                                                                        </div>
+                                                                                                                    <!-- </div> -->
+                                                                                                                </div>
+                                                                                                                <div class="row">
+                                                                                                                    <label for="lastName"
+                                                                                                                        class="col-sm-2 col-form-label">Break duration</label>
+                                                                                                                    <div class="col-auto">
+                                                                                                                        <input type="time"   class="form-control"
+                                                                                                                            id="lastName"
+                                                                                                                            placeholder="Last name">
+                                                                                                                        <p id="lastNamError">
+                                                                                                                        </p>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="row">
+                                                                                                                    <label for="emailAdd" class="col-sm-2 col-form-label">Add a note</label>
+                                                                                                                    <div class="col-md-4">
+                                                                                                                        <textarea name="" class="form-control" id="" cols="40" rows="5"></textarea>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="row">
+                                                                                                                    <p>This shift is <strong>8 hour with no break </strong></p>
+                                                                                                                </div>
+                                                                                                                <div class="form-group col-md-12 d-flex justify-content-end">
+                                                                                                                    <button type="button"
+                                                                                                                        id="next1"
+                                                                                                                        onclick="next({id:'next',form:'form',count:1})"
+                                                                                                                        class="save-btn">Next
+                                                                                                                        step</button>
+                                                                                                                </div>
+                                                                                                            </form>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="container remove-padding">
+                                                                                            <div class="row" id="form2" style="display: none;">
+                                                                                                <div class="col-md-12">
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-md-12">
+                                                                                                            <h4>Assign employees to Fri 20 Jan, 09:00-17:00</h4>
+                                                                                                            <span class="date-of-weak-shift">Find an employee or a team</span>
+                                                                                                        </div>
+                                                                                                        <div class="col-sm-3 col-md-4">
+                                                                                                            <select class="form-select form-control" aria-label="Default select example">
+                                                                                                                <option selected="" value="1">Search by name
+                                                                                                                </option>
+                                                                                                                <option value="2">Search by
+                                                                                                                    group</option>
+                                                                                                            </select>
+                                                                                                        </div>
+                                                                                                        <div class="col-sm-3 col-md-4">
+                                                                                                            <input type="text" class="form-control" placeholder="Enter name">
+                                                                                                        </div>
+                                                                                                        <div class="col-md-4 d-flex justify-content-end">
+                                                                                                            <button type="button" class="select-employee">Select
+                                                                                                                all</button>
+                                                                                                            <button type="button" class="select-employee">Deselect
+                                                                                                                all</button>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="row employee-name my-4">
+                                                                                                        <div class="col-md-6">
+                                                                                                            <input type="checkbox" class="custom_checkbox" id="select_checkbox_1">
+                                                                                                            <label for="select_checkbox_1" class="name">
+                                                                                                                <p>Adam Woods</p>
+                                                                                                                <p class="select_tick">
+                                                                                                                    <span class="right_tick"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                                                                                                </p>
+                                                                                                            </label>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-6">
+                                                                                                            <input type="checkbox" class="custom_checkbox" id="select_checkbox_2">
+                                                                                                            <label for="select_checkbox_2" class="name">
+                                                                                                                <p>Adam Woods</p>
+                                                                                                                <p class="select_tick">
+                                                                                                                    <span class="right_tick"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                                                                                                </p>
+                                                                                                            </label>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-6">
+                                                                                                            <input type="checkbox" class="custom_checkbox" id="select_checkbox_3">
+                                                                                                            <label for="select_checkbox_3" class="name">
+                                                                                                                <p>Adam Woods</p>
+                                                                                                                <p class="select_tick">
+                                                                                                                    <span class="right_tick"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                                                                                                </p>
+                                                                                                            </label>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-6">
+                                                                                                            <input type="checkbox" class="custom_checkbox" id="select_checkbox_4">
+                                                                                                            <label for="select_checkbox_4" class="name">
+                                                                                                                <p>Adam Woods</p>
+                                                                                                                <p class="select_tick">
+                                                                                                                    <span class="right_tick"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                                                                                                </p>
+                                                                                                            </label>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-6">
+                                                                                                            <input type="checkbox" class="custom_checkbox" id="select_checkbox_5">
+                                                                                                            <label for="select_checkbox_5" class="name">
+                                                                                                                <p>Adam Woods</p>
+                                                                                                                <p class="select_tick">
+                                                                                                                    <span class="right_tick"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                                                                                                </p>
+                                                                                                            </label>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-6">
+                                                                                                            <input type="checkbox" class="custom_checkbox" id="select_checkbox_6">
+                                                                                                            <label for="select_checkbox_6" class="name">
+                                                                                                                <p>Adam Woods</p>
+                                                                                                                <p class="select_tick">
+                                                                                                                    <span class="right_tick"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                                                                                                </p>
+                                                                                                            </label>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="row">
+                                                                                                        <p>This shift has<strong> 1 employee </strong>working <strong>8 hrs</strong></p>
+                                                                                                    </div>
+                                                                                                    <div class="address-detail">
+                                                                                                        <div class="row my-2">
+                                                                                                            <div class="col-md-12 d-flex justify-content-end">
+                                                                                                                <div class="previous m-2">
+                                                                                                                    <button type="button"
+                                                                                                                        id="back1"
+                                                                                                                        onclick="back({id:'back',form:'form',count:2})"
+                                                                                                                        class="previous_btn">Back</button>
+                                                                                                                </div>
+                                                                                                                <div class="continue_save m-2">
+                                                                                                                    <button type="button"
+                                                                                                                        class="continue_btn"
+                                                                                                                        id="next2"
+                                                                                                                        onclick="next({id:'next',form:'form',count:2})">Next
+                                                                                                                        step
+                                                                                                                    </button>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="container remove-padding">
+                                                                                            <div class="row" id="form3"
+                                                                                                style="display: none;">
+                                                                                                <div class="col-md-12">
+                                                                                                    <div class="employment-details">
+                                                                                                        <div class="row my-2">
+                                                                                                            <div class="col-md-12">
+                                                                                                                <h4>Shift summary</h4>
+                                                                                                                <p>Shift will be created for <strong> Fri 20 Jan, 09:00-17:00.</strong></p>
+                                                                                                            </div>
+                                                                                                            <div class="col-md-12 d-flex justify-content-end">
+                                                                                                                <div class="previous m-2">
+                                                                                                                    <button type="button"
+                                                                                                                        id="back2"
+                                                                                                                        onclick="back({id:'back',form:'form',count:3})"
+                                                                                                                        class="previous_btn">Back</button>
+                                                                                                                </div>
+                                                                                                                <div class="continue_save m-2   ">
+                                                                                                                    <button type="button"
+                                                                                                                        class="continue_btn"
+                                                                                                                        id="next4"
+                                                                                                                        onclick="next({id:'next',form:'form',count:3})">Add shift</button>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="modal-footer justify-content-start">
+                                                                            <button type="button"
+                                                                                class="btn-footer-modal"
+                                                                                data-bs-dismiss="modal">Close</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <div class="date-of-shift">
+                                                            <strong>Wed 11 Jan</strong>
+                                                        </div>
+                                                        <div class="amount-of-shift">
+                                                            <p>0 shifts</p>
+                                                        </div>
+                                                        <div class="add-shift-btn">
+                                                            <!-- Button trigger modal -->
+                                                            <button type="button" class="modal-btn"
+                                                                data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                                Add shift
+                                                            </button>
+                                                            <!-- Modal -->
+                                                            <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h1 class="modal-title fs-5"
+                                                                                id="exampleModalLabel">Modal title</h1>
+                                                                            <button type="button" class="btn-close"
+                                                                                data-bs-dismiss="modal"
+                                                                                aria-label="Close"></button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            ...
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button"
+                                                                                class="btn btn-secondary"
+                                                                                data-bs-dismiss="modal">Close</button>
+                                                                            <button type="button"
+                                                                                class="btn btn-primary">Save
+                                                                                changes</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <div class="date-of-shift">
+                                                            <strong>Wed 11 Jan</strong>
+                                                        </div>
+                                                        <div class="amount-of-shift">
+                                                            <p>0 shifts</p>
+                                                        </div>
+                                                        <div class="add-shift-btn">
+                                                            <!-- Button trigger modal -->
+                                                            <button type="button" class="modal-btn"
+                                                                data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                                Add shift
+                                                            </button>
+
+                                                            <!-- Modal -->
+                                                            <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h1 class="modal-title fs-5"
+                                                                                id="exampleModalLabel">Modal title</h1>
+                                                                            <button type="button" class="btn-close"
+                                                                                data-bs-dismiss="modal"
+                                                                                aria-label="Close"></button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            ...
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button"
+                                                                                class="btn btn-secondary"
+                                                                                data-bs-dismiss="modal">Close</button>
+                                                                            <button type="button"
+                                                                                class="btn btn-primary">Save
+                                                                                changes</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <div class="date-of-shift">
+                                                            <strong>Wed 11 Jan</strong>
+                                                        </div>
+                                                        <div class="amount-of-shift">
+                                                            <p>0 shifts</p>
+                                                        </div>
+                                                        <div class="add-shift-btn">
+                                                            <!-- Button trigger modal -->
+                                                            <button type="button" class="modal-btn"
+                                                                data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                                Add shift
+                                                            </button>
+
+                                                            <!-- Modal -->
+                                                            <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h1 class="modal-title fs-5"
+                                                                                id="exampleModalLabel">Modal title</h1>
+                                                                            <button type="button" class="btn-close"
+                                                                                data-bs-dismiss="modal"
+                                                                                aria-label="Close"></button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            ...
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button"
+                                                                                class="btn btn-secondary"
+                                                                                data-bs-dismiss="modal">Close</button>
+                                                                            <button type="button"
+                                                                                class="btn btn-primary">Save
+                                                                                changes</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <div class="date-of-shift">
+                                                            <strong>Wed 11 Jan</strong>
+                                                        </div>
+                                                        <div class="amount-of-shift">
+                                                            <p>0 shifts</p>
+                                                        </div>
+                                                        <div class="add-shift-btn">
+                                                            <!-- Button trigger modal -->
+                                                            <button type="button" class="modal-btn"
+                                                                data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                                Add shift
+                                                            </button>
+
+                                                            <!-- Modal -->
+                                                            <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h1 class="modal-title fs-5"
+                                                                                id="exampleModalLabel">Modal title</h1>
+                                                                            <button type="button" class="btn-close"
+                                                                                data-bs-dismiss="modal"
+                                                                                aria-label="Close"></button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            ...
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button"
+                                                                                class="btn btn-secondary"
+                                                                                data-bs-dismiss="modal">Close</button>
+                                                                            <button type="button"
+                                                                                class="btn btn-primary">Save
+                                                                                changes</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <div class="date-of-shift">
+                                                            <strong>Wed 11 Jan</strong>
+                                                        </div>
+                                                        <div class="amount-of-shift">
+                                                            <p>0 shifts</p>
+                                                        </div>
+                                                        <div class="add-shift-btn">
+                                                            <!-- Button trigger modal -->
+                                                            <button type="button" class="modal-btn"
+                                                                data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                                Add shift
+                                                            </button>
+
+                                                            <!-- Modal -->
+                                                            <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h1 class="modal-title fs-5"
+                                                                                id="exampleModalLabel">Modal title</h1>
+                                                                            <button type="button" class="btn-close"
+                                                                                data-bs-dismiss="modal"
+                                                                                aria-label="Close"></button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            ...
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button"
+                                                                                class="btn btn-secondary"
+                                                                                data-bs-dismiss="modal">Close</button>
+                                                                            <button type="button"
+                                                                                class="btn btn-primary">Save
+                                                                                changes</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <div class="date-of-shift">
+                                                            <strong>Wed 11 Jan</strong>
+                                                        </div>
+                                                        <div class="amount-of-shift">
+                                                            <p>0 shifts</p>
+                                                        </div>
+                                                        <div class="add-shift-btn">
+                                                            <!-- Button trigger modal -->
+                                                            <button type="button" class="modal-btn"
+                                                                data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                                Add shift
+                                                            </button>
+
+                                                            <!-- Modal -->
+                                                            <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h1 class="modal-title fs-5"
+                                                                                id="exampleModalLabel">Modal title</h1>
+                                                                            <button type="button" class="btn-close"
+                                                                                data-bs-dismiss="modal"
+                                                                                aria-label="Close"></button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            ...
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button"
+                                                                                class="btn btn-secondary"
+                                                                                data-bs-dismiss="modal">Close</button>
+                                                                            <button type="button"
+                                                                                class="btn btn-primary">Save
+                                                                                changes</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <div class="date-of-shift">
+                                                            <strong>Wed 11 Jan</strong>
+                                                        </div>
+                                                        <div class="amount-of-shift">
+                                                            <p>0 shifts</p>
+                                                        </div>
+                                                        <div class="add-shift-btn">
+                                                            <!-- Button trigger modal -->
+                                                            <button type="button" class="modal-btn"
+                                                                data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                                Add shift
+                                                            </button>
+
+                                                            <!-- Modal -->
+                                                            <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                <div class="modal-dialog">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h1 class="modal-title fs-5"
+                                                                                id="exampleModalLabel">Modal title</h1>
+                                                                            <button type="button" class="btn-close"
+                                                                                data-bs-dismiss="modal"
+                                                                                aria-label="Close"></button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            ...
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button"
+                                                                                class="btn btn-secondary"
+                                                                                data-bs-dismiss="modal">Close</button>
+                                                                            <button type="button"
+                                                                                class="btn btn-primary">Save
+                                                                                changes</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Main Wrape Section End Here -->
+    <!-- ===================================== 
+Bootstrap Main
+========================================-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function next(id) {
+            let bg = document.getElementById('bg' + id.count)
+            let currentForm = document.getElementById(id.form + id.count);
+            let nextForm = document.getElementById(id.form + parseInt((id.count + 1)));
+            setTimeout(() => {
+                currentForm.style.display = 'none';
+                nextForm.style.display = 'block';
+                bg.style = 'none';
+            }, 200);
+        }
+
+        function back(id) {
+            let bg = document.getElementById('bg' + parseInt(id.count - 1))
+            let currentForm = document.getElementById(id.form + id.count);
+            let prevForm = document.getElementById(id.form + parseInt((id.count - 1)));
+            setTimeout(() => {
+                currentForm.style.display = 'none';
+                prevForm.style.display = 'block';
+                bg.style.color = '#999';
+                bg.style.backgroundColor = '#fff';
+            }, 200);
+        }
+
+        $('input').timepicker();
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+
+    </script>
+</body>
+
+</html>
