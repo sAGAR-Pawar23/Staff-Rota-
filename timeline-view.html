@@ -276,7 +276,7 @@
                                                             <button type="button" class="modal-btn" data-bs-toggle="modal" data-bs-target="#exampleModalAddShift"> Add shift </button>
                                                         </div>
                                                     </div>
-                                                    <div class="w_full d-none">
+                                                    <div class="w_full d-ne">
                                                         <div class="hour_box" style="width: calc(4.16667%);">
                                                         </div>
                                                         <div class="hour_box" style="width: calc(4.16667%);">
@@ -342,100 +342,6 @@
                                                                 </div>
                                                             </div>
                                                         </button>
-                                                        
-                                                        <!-- Modal -->
-                                                        <div class="modal fade" id="exampleModalShiftModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                            <div class="modal-dialog">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Shift details</h1>
-                                                                <button type="button" class="btn_close" data-bs-dismiss="modal" aria-label="Close">&#10006;</button>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                    <div class="container remove-padding M-right" id="multiForm" style="display: block;">
-                                                                        <div class="row">
-                                                                            <div class="col-md-12">
-                                                                                <div class="row" id="form1" style="display: block;">
-                                                                                    <div class="col-md-12">
-                                                                                        <div class="employees-info">
-                                                                                            <div class="row">
-                                                                                                <div class="col-md-12" id="showDiv">
-                                                                                                    <form class="employees-data" onsubmit="return validateform()">
-                                                                                                        <div class="row my-2">
-                                                                                                            <label for="assign_work" class="col-sm-3 col-form-label">Assigned worker</label>
-                                                                                                            <div class="col-sm-4">
-                                                                                                                <select name="" id="" class="form-select form-control">
-                                                                                                                    <option value="person_name1">Jack</option>
-                                                                                                                    <option value="person_name2">Jack</option>
-                                                                                                                    <option value="person_name3">Jack</option>
-                                                                                                                    <option value="person_name4">Jack</option>
-                                                                                                                    <option value="person_name5">Jack</option>
-                                                                                                                    <option value="person_name6">Jack</option>
-                                                                                                                </select>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="row my-2">
-                                                                                                            <label for="date_of_shift" class="col-sm-3 col-form-label">Shift day</label>
-                                                                                                            <div class="col-md-4">
-                                                                                                                <input type="date" class="form-control" id="date_of_shift">
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="row my-2">
-                                                                                                            <label for="firstName" class="col-sm-3 col-form-label">Shift time</label>
-                                                                                                                <!-- <div class="col-sm-5"> -->
-                                                                                                                <div class="col-auto">
-                                                                                                                    <input type="time" class="col-sm-2 form-control" id="firstName" aria-describedby="emailHelp" value="9:00" placeholder="">
-                                                                                                                </div>
-                                                                                                                <div class="col-auto">
-                                                                                                                    <span class="btew-time">to</span>
-                                                                                                                </div>
-                                                                                                                <div class="col-auto">
-                                                                                                                    <input type="time" class="col-sm-2 form-control" id="firstName" value="9:00" aria-describedby="emailHelp" placeholder="">
-                                                                                                                </div>
-                                                                                                            <!-- </div> -->
-                                                                                                        </div>
-                                                                                                        <div class="row my-2">
-                                                                                                            <label for="lastName" class="col-sm-3 col-form-label">Break duration</label>
-                                                                                                            <div class="col-auto">
-                                                                                                                <input type="time" class="form-control" id="lastName" placeholder="Last name">
-                                                                                                                <p id="lastNamError">
-                                                                                                                </p>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="row">
-                                                                                                            <label for="emailAdd" class="col-sm-12">Add a note</label>
-                                                                                                            <div class="col-md-12">
-                                                                                                                <textarea name="" class="form-control" id="" cols="40" rows="3"></textarea>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                        <div class="row">
-                                                                                                            <small class="my-2">Notes are visible to everyone</small>
-                                                                                                            <div class="d-flex col-md-4 align-items-center my-3">
-                                                                                                                <b>On this day</b>
-                                                                                                            </div>
-                                                                                                            <div class="col-md-4 my-3" style="opacity: 0.7; font-weight: 500;">No event on this day</div>
-                                                                                                            <p>This shift is <strong>8 hour with no break </strong></p>
-                                                                                                        </div>
-                                                                                                        <div class="form-group col-md-12 d-flex justify-content-end">
-                                                                                                            <button type="button" class="delete_modal_btn">Delete</button>
-                                                                                                            <button type="button" id="next1" onclick="next({id:'next',form:'form',count:1})" class="save-btn">Update shift</button>
-                                                                                                        </div>
-                                                                                                    </form>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="modal-footer justify-content-start">
-                                                                    <button type="button" class="close_modal_btn" data-bs-dismiss="modal">Close</button>
-                                                                </div>
-                                                            </div>
-                                                            </div>
-                                                        </div>
                                                     </div>
                                                     <div class="d-flex">
                                                         <div class="date-of-shift">
@@ -829,7 +735,100 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <!-- Add Shift Modal -->    
+                                                            <!-- Add Shift Modal -->   
+                                                            <!-- shift timing  Modal -->
+                                                        <div class="modal fade" id="exampleModalShiftModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog" style="max-width: 50rem;">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Shift details</h1>
+                                                                <button type="button" class="btn_close" data-bs-dismiss="modal" aria-label="Close">&#10006;</button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="container remove-padding M-right" id="multiForm" style="display: block;">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <div class="row" id="form1" style="display: block;">
+                                                                                    <div class="col-md-12">
+                                                                                        <div class="employees-info">
+                                                                                            <div class="row">
+                                                                                                <div class="col-md-12" id="showDiv">
+                                                                                                    <form class="employees-data" onsubmit="return validateform()">
+                                                                                                        <div class="row my-2">
+                                                                                                            <label for="assign_work" class="col-sm-3 col-form-label">Assigned worker</label>
+                                                                                                            <div class="col-sm-4">
+                                                                                                                <select name="" id="" class="form-select form-control">
+                                                                                                                    <option value="person_name1">Jack</option>
+                                                                                                                    <option value="person_name2">Jack</option>
+                                                                                                                    <option value="person_name3">Jack</option>
+                                                                                                                    <option value="person_name4">Jack</option>
+                                                                                                                    <option value="person_name5">Jack</option>
+                                                                                                                    <option value="person_name6">Jack</option>
+                                                                                                                </select>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="row my-2">
+                                                                                                            <label for="date_of_shift" class="col-sm-3 col-form-label">Shift day</label>
+                                                                                                            <div class="col-md-4">
+                                                                                                                <input type="date" class="form-control" id="date_of_shift">
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="row my-2">
+                                                                                                            <label for="firstName" class="col-sm-3 col-form-label">Shift time</label>
+                                                                                                                <!-- <div class="col-sm-5"> -->
+                                                                                                                <div class="col-auto">
+                                                                                                                    <input type="time" class="col-sm-2 form-control" id="firstName" aria-describedby="emailHelp" value="9:00" placeholder="">
+                                                                                                                </div>
+                                                                                                                <div class="col-auto">
+                                                                                                                    <span class="btew-time">to</span>
+                                                                                                                </div>
+                                                                                                                <div class="col-auto">
+                                                                                                                    <input type="time" class="col-sm-2 form-control" id="firstName" value="9:00" aria-describedby="emailHelp" placeholder="">
+                                                                                                                </div>
+                                                                                                            <!-- </div> -->
+                                                                                                        </div>
+                                                                                                        <div class="row my-2">
+                                                                                                            <label for="lastName" class="col-sm-3 col-form-label">Break duration</label>
+                                                                                                            <div class="col-auto">
+                                                                                                                <input type="time" class="form-control" id="lastName" placeholder="Last name">
+                                                                                                                <p id="lastNamError">
+                                                                                                                </p>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="row">
+                                                                                                            <label for="emailAdd" class="col-sm-12">Add a note</label>
+                                                                                                            <div class="col-md-12">
+                                                                                                                <textarea name="" class="form-control" id="" cols="40" rows="3"></textarea>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="row">
+                                                                                                            <small class="my-2">Notes are visible to everyone</small>
+                                                                                                            <div class="d-flex col-md-4 align-items-center my-3">
+                                                                                                                <b>On this day</b>
+                                                                                                            </div>
+                                                                                                            <div class="col-md-4 my-3" style="opacity: 0.7; font-weight: 500;">No event on this day</div>
+                                                                                                            <p>This shift is <strong>8 hour with no break </strong></p>
+                                                                                                        </div>
+                                                                                                        <div class="form-group col-md-12 d-flex justify-content-end">
+                                                                                                            <button type="button" class="delete_modal_btn">Delete</button>
+                                                                                                            <button type="button" id="next1" onclick="next({id:'next',form:'form',count:1})" class="save-btn">Update shift</button>
+                                                                                                        </div>
+                                                                                                    </form>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer justify-content-start">
+                                                                    <button type="button" class="close_modal_btn" data-bs-dismiss="modal">Close</button>
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                        </div> 
     <!-- Main Wrape Section End Here -->
     <!-- ===================================== 
 Bootstrap Main
