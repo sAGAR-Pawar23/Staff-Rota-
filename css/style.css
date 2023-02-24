@@ -592,7 +592,7 @@ h4.my-summry-part {
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     border-bottom: 100px solid #f7f7f9;
-    left: var(--leftBack, 427px);
+    left: calc(0.5% + 14.4%*3)
 }
 
 aside.right-side-info {

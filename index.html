@@ -554,8 +554,15 @@ Bootstrap Main
       element.setAttribute("id", `crical-part-info-main-${index}`)
     });
 
+    const selectedElement = document.querySelector('.add_trans').id.split('-')[4];
+    var styleElem = document.head.appendChild(document.createElement("style"));
+    styleElem.innerHTML = `.my-summary-info:before {left: calc(0.5% + 14.4%*${selectedElement});}`;
+
     const moveUp = (id) => {
+      const getIdNumber = id.split("-")
+      const selectedElement = document.querySelector('.add_trans').id.split('-')[4];
       const mainElement = document.getElementById(id);
+
       allTimingAreas.forEach((element, index) => {
         if (element.id == mainElement.id) {
           mainElement.classList.add('add_trans');
@@ -563,6 +570,14 @@ Bootstrap Main
           element.classList.remove('add_trans');
         }
       });
+
+      if (getIdNumber[4] > selectedElement) {
+        var styleElem = document.head.appendChild(document.createElement("style"));
+        styleElem.innerHTML = `.my-summary-info:before {left: calc(0.5% + 14.4%*${getIdNumber[4]});}`;
+      } else {
+        var styleElem = document.head.appendChild(document.createElement("style"));
+        styleElem.innerHTML = `.my-summary-info:before {left: calc(0.5% + 14.4%*${getIdNumber[4]});}`;
+      }
     }
 
   </script>
