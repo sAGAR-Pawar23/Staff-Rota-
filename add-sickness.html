@@ -99,7 +99,7 @@
                                             <div class="mb-3 row">
                                                 <label for="name" class="col-sm-2 col-form-label">Employee</label>
                                                 <div class="col-sm-3 col-md-3 position-rel">
-                                                    <input type="text" placeholder="Employees name" class="form-control"
+                                                    <input type="text" onchange="change(this)"  placeholder="Employees name" class="form-control"
                                                         id="staticEmail" value="">
                                                         <span class="position-abs"><i class="fa fa-search" aria-hidden="true"></i></span>
                                                 </div>
@@ -182,6 +182,11 @@
     <!-- ===================================== 
 Bootstrap Main
 ========================================-->
+<script>
+    function change(employ) {
+        console.log(employ);
+    }
+</script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
