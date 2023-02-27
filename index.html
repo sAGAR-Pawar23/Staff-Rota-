@@ -556,7 +556,7 @@ Bootstrap Main
 
     const selectedElement = document.querySelector('.add_trans').id.split('-')[4];
     var styleElem = document.head.appendChild(document.createElement("style"));
-    styleElem.innerHTML = `.my-summary-info:before {left: calc(0.5% + 14.4%*${selectedElement});}`;
+    styleElem.innerHTML = `.my-summary-info:before {left: calc(3.4% + 14.4%*${selectedElement});}`;
 
     const moveUp = (id) => {
       const getIdNumber = id.split("-")
@@ -573,10 +573,10 @@ Bootstrap Main
 
       if (getIdNumber[4] > selectedElement) {
         var styleElem = document.head.appendChild(document.createElement("style"));
-        styleElem.innerHTML = `.my-summary-info:before {left: calc(0.5% + 14.4%*${getIdNumber[4]});}`;
+        styleElem.innerHTML = `.my-summary-info:before {left: calc(3.4% + 14.4%*${getIdNumber[4]});}`;
       } else {
         var styleElem = document.head.appendChild(document.createElement("style"));
-        styleElem.innerHTML = `.my-summary-info:before {left: calc(0.5% + 14.4%*${getIdNumber[4]});}`;
+        styleElem.innerHTML = `.my-summary-info:before {left: calc(3.4% + 14.4%*${getIdNumber[4]});}`;
       }
     }
 

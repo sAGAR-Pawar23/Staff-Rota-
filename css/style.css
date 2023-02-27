@@ -438,8 +438,6 @@ Crical Bar Info
     padding-top: 32px;
 }
 
-
-
 .main-shodw-box {
     background-color: #fff;
     display: inline-block;
@@ -456,9 +454,6 @@ Crical Bar Info
     top: 8%;
     margin-top: -34px;
 }
-
-
-
 .from-equal {
     display: flex;
     width: 100%;
@@ -467,7 +462,7 @@ Crical Bar Info
 
 .my-summary-info {
     margin-top: 115px;
-    background-color: #f7f7f9;
+    background-color: #eef6f9;
     width: 100%;
     display: inline-block;
     padding: 40px;
@@ -550,7 +545,6 @@ h4.my-summry-part {
     color: #1f88b5;
 }
 
-
 .main-white-crical {
     position: relative;
     border-radius: 9999px;
@@ -586,12 +580,13 @@ h4.my-summry-part {
 .my-summary-info:before {
     position: absolute;
     content: "";
-    top: -62px;
+    top: -52px;
     width: 0;
     height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 100px solid #f7f7f9;
+    transition: all 0.3s ease-out;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 52px solid #eef6f9;
     left: calc(0.5% + 14.4%*3)
 }
 
@@ -601,12 +596,8 @@ aside.right-side-info {
     border-radius: 6px;
     box-shadow: rgb(187 184 184 / 25%) 0px 2px 8px;
     position: relative;
-
     width: 94%;
-
 }
-
-
 
 .tab-first-infos h3 a {
     background-color: #1f88b5;
